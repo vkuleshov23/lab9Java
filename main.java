@@ -50,7 +50,7 @@ public class main{
         }
         System.out.println("finished finding deadlocked threads");
 
-        // System.out.println("aMap:\n" + aMap);
-        // System.out.println("bMap:\n" + bMap);
+        System.err.println("aMap:\n" + aMap);
+        System.err.println("bMap:\n" + bMap);
     }
 }
