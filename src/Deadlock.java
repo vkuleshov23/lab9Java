@@ -1,4 +1,4 @@
-package prog.lab9;
+package src;
 import java.util.HashMap;
 
 public class Deadlock {
@@ -61,10 +61,7 @@ public class Deadlock {
 			} catch(NullPointerException err) {
 				throw err;
 			}
-		}
-        try{Thread.sleep(200);} catch(InterruptedException err){}
-		this.get(finish+finish, tmpMap);
-		
+		}		
 		return newMap;
 	}
 }

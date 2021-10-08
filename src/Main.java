@@ -1,13 +1,13 @@
-package prog.lab9;
+package src;
 import java.util.HashMap;
 import java.lang.management.*;
 
-public class main{
+public class Main{
     public static void main(String[] args){
         
-        Deadlock a = new Deadlock(50, 120, "Thread1");
+        Deadlock a = new Deadlock(50, 52, "Thread1");
         a.setAll("a");
-        Deadlock b = new Deadlock(55, 125, "Thread2");
+        Deadlock b = new Deadlock(49, 51, "Thread2");
         b.setAll("b");
         HashMap<Integer, String> aMap = new HashMap<>();
         aMap.put(1, "init");
@@ -36,7 +36,7 @@ public class main{
                 }
             }
         }).start();
-        try{Thread.sleep(2000);} catch(InterruptedException err){}
+        try{Thread.sleep(200);} catch(InterruptedException err){}
 
         System.out.println("finding deadlocked threads");
         ThreadMXBean tmx = ManagementFactory.getThreadMXBean();

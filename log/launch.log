@@ -1,0 +1,16 @@
+Thread2 49
+Thread1 49
+49 null
+49 b49
+Thread2 50
+50 b50
+Thread2 51
+51 b51
+Thread2 52
+52 null
+other map using49 b49
+other map using52 a52
+aMap:
+{1=init}
+bMap:
+{1=init, 49=b49, 50=b50, 51=b51}
