@@ -1,2 +1,7 @@
 *.class
 src/*.class
+log/*
+log
+DOP/log
+DOP/bin
+bin

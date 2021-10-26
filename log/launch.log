@@ -1,16 +1,42 @@
+Thread1 35
+Thread2 35
+35 b35
+Thread2 36
+36 b36
+35 null
+Thread2 37
+37 b37
+Thread2 38
+38 b38
+Thread2 39
+39 b39
+Thread2 40
+40 b40
+Thread2 41
+41 b41
+Thread2 42
+42 b42
+Thread2 43
+43 b43
+Thread2 44
+44 b44
+Thread2 45
+45 b45
+Thread2 46
+46 b46
+Thread2 47
+47 b47
+Thread2 48
+48 b48
 Thread2 49
-Thread1 49
-49 null
 49 b49
 Thread2 50
 50 b50
 Thread2 51
-51 b51
-Thread2 52
-52 null
-other map using49 b49
-other map using52 a52
+51 null
+other map using51 a51
+other map using35 b35
 aMap:
 {1=init}
 bMap:
-{1=init, 49=b49, 50=b50, 51=b51}
+{1=init, 35=b35, 36=b36, 37=b37, 38=b38, 39=b39, 40=b40, 41=b41, 42=b42, 43=b43, 44=b44, 45=b45, 46=b46, 47=b47, 48=b48, 49=b49, 50=b50}

@@ -13,24 +13,24 @@ public class Deadlock {
 		this.to = to;
 		this.thread = thread_num;
 	}
-	public void set(int key, String name){
+	public void set(int key, String name) {
 		map.put(key, name);
 	}
-	public void setAll(String name){
-		for(int i = this.from; i <= this.to; i++){
+	public void setAll(String name) {
+		for(int i = this.from; i <= this.to; i++) {
 			this.set(i, name + i);
 		}
 	}
-	public int getFrom(){
+	public int getFrom() {
 		return this.from;
 	}
-	public int getTo(){
+	public int getTo() {
 		return this.to;
 	}
-	public String get(int key){
+	public String get(int key) {
 		try{
 			return map.get(key);
-		} catch(NullPointerException err){
+		} catch(NullPointerException err) {
 			return "Error";
 		}
 	}
@@ -40,7 +40,9 @@ public class Deadlock {
 		try{
 			System.err.println(key + " " + this.map.get(key));
 			name = this.map.get(key);
-			if(name == null) throw new NullPointerException("no key");
+			if(name == null) {
+				throw new NullPointerException("no key");
+			}
 		} catch(NullPointerException err) {
 			System.err.println("other map using" + key + " " + tmp.map.get(key));
 			name = tmp.get(key, this);

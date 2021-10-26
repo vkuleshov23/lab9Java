@@ -2,12 +2,12 @@ package src;
 import java.util.HashMap;
 import java.lang.management.*;
 
-public class Main{
-    public static void main(String[] args){
+public class Main {
+    public static void main(String[] args) {
         
-        Deadlock a = new Deadlock(50, 52, "Thread1");
+        Deadlock a = new Deadlock(40, 55, "Thread1");
         a.setAll("a");
-        Deadlock b = new Deadlock(49, 51, "Thread2");
+        Deadlock b = new Deadlock(35, 50, "Thread2");
         b.setAll("b");
         HashMap<Integer, String> aMap = new HashMap<>();
         aMap.put(1, "init");
@@ -17,11 +17,10 @@ public class Main{
         new Thread(new Runnable() {
             @Override
             public void run() {
-                try{
+                try {
                     a.fillNewByFirstComplementBySecond(b, aMap);
                 } catch(NullPointerException err){
                     System.out.println("null pointer");
-                    
                 }
             }
         }).start();
@@ -36,7 +35,9 @@ public class Main{
                 }
             }
         }).start();
-        try{Thread.sleep(200);} catch(InterruptedException err){}
+        try {
+            Thread.sleep(200);
+        } catch(InterruptedException err) {}
 
         System.out.println("finding deadlocked threads");
         ThreadMXBean tmx = ManagementFactory.getThreadMXBean();
@@ -49,7 +50,6 @@ public class Main{
             }
         }
         System.out.println("finished finding deadlocked threads");
-
         System.err.println("aMap:\n" + aMap);
         System.err.println("bMap:\n" + bMap);
     }
